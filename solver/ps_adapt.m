@@ -9,7 +9,7 @@ function [xres,fres,k] = ps_adapt(problem,alpha,beta,epsilon,b,r,a_start,a_lim)
 % Check for solver options
 if isempty(options)
     % If there are no options set, at least fall back to these here
-	options = optimset('Display','none'); 
+	options = optimset('Display','none','Algorithm','interior-point'); 
 end
 
 %Initialize internal parameters and output

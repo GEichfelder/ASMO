@@ -25,20 +25,24 @@ if m > 1
         [xres,fres,k] = ps_standard(problem,beta,epsilon,b,r,a_start,a_lim);
     end
 else
-    error("This algorithm is made only for multiobjective optimization problems (m>=2).");
+    error('This algorithm is made only for multiobjective optimization problems (m>=2).');
 end
 
 % Plot
 if plot_result > 0
     if m < 3
         plot(fres(1,:),fres(2,:),'LineStyle','none','Marker','o','MarkerFaceColor','black');
+        grid on;
         xlabel('f_1');
         ylabel('f_2');
+        title('Approximation of pareto front');
     elseif m < 4
         plot3(fres(1,:),fres(2,:),fres(3,:),'LineStyle','none','Marker','o','MarkerFaceColor','black');
+        grid on;
         xlabel('f_1');
         ylabel('f_2');
         zlabel('f_3');
+        title('Approximation of pareto front');
     end
 end
 end

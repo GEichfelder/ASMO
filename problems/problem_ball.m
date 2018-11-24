@@ -1,6 +1,7 @@
 function [n,m,fun,x0,Aineq,bineq,Aeq,beq,lb,ub,nonlcon,options] = problem_ball()
-%PROBLEM_BALL A test instance wirh m=3 for our solver
-%   Try to compute the pareto front of an euclidean ball
+%PROBLEM_BALL A test instance with m=3 for our solver
+%   Try to compute the pareto front of an euclidean ball with its center at
+%   [0;0;0] and radius 1.
 
 %Dimension of domain and image space
 n = 3;

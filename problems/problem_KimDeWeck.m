@@ -1,6 +1,10 @@
 function [n,m,fun,x0,Aineq,bineq,Aeq,beq,lb,ub,nonlcon,options] = problem_KimDeWeck()
-%PROBLEM_KIMDEWECK A test instance wirh m=3 for our solver
-%   A problem by Kim and de Weck
+%PROBLEM_KIMDEWECK A test instance with m = 3 by Kim and de Weck
+%   This is a test problem to demonstrate how this algorithm performs in
+%   higher dimensions (m > 2). This example was taken from:
+%   I. Y. Kim and O. de Weck, Adaptive weighted sum method for
+%   multiobjective optimization: a new method for pareto front generation,
+%   Structural and Multidisciplinary Optimization, 31:105-116, 2006.
 
 %Dimension of domain and image space
 n = 3;

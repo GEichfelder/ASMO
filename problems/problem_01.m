@@ -1,6 +1,9 @@
-function [n,m,fun,x0,Aineq,bineq,Aeq,beq,lb,ub,nonlcon,options] = problem_A24()
-%PROBLEM_A24 A test instance for our solver
-%   Based on excercise 24 of VOP1
+function [n,m,fun,x0,Aineq,bineq,Aeq,beq,lb,ub,nonlcon,options] = problem_01()
+%PROBLEM_01 A test instance for m = 2
+%   This example can be used tu see how both the adaptive and non-adaptive
+%   algorithm work. Therefor you could choose one of the corresponding
+%   parameter files ps_adapt_param_01 (adaptive) or ps_param_01
+%   (non-adaptive).
 
 %Dimension of domain and image space
 n = 40;

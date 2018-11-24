@@ -9,13 +9,13 @@ function [xres,fres,k] = ps_general(problem,beta,epsilon,b,r)
 % Check for solver options
 if isempty(options)
     % If there are no options set, at least fall back to these here
-	options = optimset('Display','none'); 
+	options = optimset('Display','none','Algorithm','interior-point'); 
 end
 
 % Initialize internal parameters and output
 steps = floor(1/epsilon)+1;
-xres = zeros(n,m);
-fres = zeros(m,m);
+xres = zeros(n,steps^(m-1));
+fres = zeros(m,steps^(m-1));
 
 % Compute the cuboid H^0 to embed H
 % Start with the computation of a basis V
@@ -82,10 +82,10 @@ for k=0:(steps^(m-1)-1)
     for i=1:(m-1)
         s(i) = s_min(i)+mod(floor(k/(steps^(i-1))),steps)*epsilon*v(i);
     end
-    [x,~,flag] = fmincon(@(x) x(n+1),[x0;0],Aineq,bineq,Aeq,beq,lb,ub,@(x) ps_nonlcon(x),options);
+    [x] = fmincon(@(x) x(n+1),[x0;0],Aineq,bineq,Aeq,beq,lb,ub,@(x) ps_nonlcon(x),options);
     x_sol = x(1:n);
-    xres = [xres,x_sol];
-    fres = [fres,fun(x_sol)];
+    xres(:,k+1) = x_sol;
+    fres(:,k+1) = fun(x_sol);
 end
 k=k+1;
 end

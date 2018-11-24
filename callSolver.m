@@ -25,7 +25,7 @@ if m > 1
         [xres,fres,k] = ps_standard(problem,beta,epsilon,b,r,a_start,a_lim);
     end
 else
-    error("This algorithm is made only for multiobjective optimization problems (m>=2).");
+    error('This algorithm is made only for multiobjective optimization problems (m>=2).');
 end
 
 % Plot

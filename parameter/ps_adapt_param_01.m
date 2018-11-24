@@ -1,8 +1,10 @@
-function [adapt,alpha,beta,epsilon,b,r,a_start,a_lim] = ps_adapt_param_1(~)
-%PS_ADAPT_PARAM_1 Some default parameters for ps_adapt to load
-%   A demonstartion of how a parameter file could look like
+function [adapt,alpha,beta,epsilon,b,r,a_start,a_lim] = ps_adapt_param_01(~)
+%PS_ADAPT_PARAM_01 Some default parameters for ps_adapt to load
+%   A demonstration of how a parameter file could look like. You can use
+%   this together with problem_01 to see how the adaptive algorithm
+%   works for m = 2.
 
-% Should Pascoletti Serafini use adapted mode?
+% Should Pascoletti Serafini use adapted mode? (1 == yes, 0 == no)
 adapt = 1;
 
 % Parameter for Pascoletti Serafini

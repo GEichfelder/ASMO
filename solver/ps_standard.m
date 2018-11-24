@@ -14,8 +14,8 @@ end
 
 %Initialize internal parameters and output
 steps = floor(1/epsilon);
-xres = zeros(n,m);
-fres = zeros(m,m);
+xres = zeros(n,m+steps-1);
+fres = zeros(m,m+steps-1);
 
 % Autocompute parameter a if not given
 if isempty(a_start)
@@ -60,8 +60,8 @@ for k=2:steps
     a = a+epsilon.*v;
     [x] = fmincon(@(x) x(n+1),[x0;0],Aineq,bineq,Aeq,beq,lb,ub,@(x) ps_nonlcon(x),options);
     x_sol = x(1:n);
-    xres = [xres,x_sol];
-    fres = [fres,fun(x_sol)];
+    xres(:,m+k-1) = x_sol;
+    fres(:,m+k-1) = fun(x_sol);
 end
 k=k+1;
 end

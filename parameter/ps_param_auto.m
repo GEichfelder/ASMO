@@ -4,7 +4,7 @@ function [adapt,alpha,beta,epsilon,b,r] = ps_param_auto(problem)
 %   and can be manipulated to use either adaptive (m = 2 only) or
 %   non-adaptive Pascoletti Serafini scalarization.
 
-% Should Pascoletti Serafini use adapted mode? (1 == yes, 0 == no)
+% Should Pascoletti Serafini use adaptive mode? (1 == yes, 0 == no)
 adapt = 0;
 
 % What is the dimension of our problem?

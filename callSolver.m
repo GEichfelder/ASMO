@@ -12,7 +12,7 @@ problem = str2func(problem_name);
 parameter = str2func(parameter_name);
 
 % Load parameters
-[adapt,alpha,beta,epsilon,b,r,a_start,a_lim] = parameter(problem);
+[adapt,alpha,beta,epsilon,b,r] = parameter(problem);
 [~,m] = problem();
 
 % Call solver
@@ -20,9 +20,9 @@ if m > 1
     if m > 2
         [xres,fres,k] = ps_general(problem,beta,epsilon,b,r);
     elseif adapt > 0
-        [xres,fres,k] = ps_adapt(problem,alpha,beta,epsilon,b,r,a_start,a_lim);
+        [xres,fres,k] = ps_adapt(problem,alpha,beta,epsilon,b,r);
     else
-        [xres,fres,k] = ps_standard(problem,beta,epsilon,b,r,a_start,a_lim);
+        [xres,fres,k] = ps_standard(problem,beta,epsilon,b,r);
     end
 else
     error('This algorithm is made only for multiobjective optimization problems (m>=2).');

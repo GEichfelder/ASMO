@@ -1,4 +1,4 @@
-function [adapt,alpha,beta,epsilon,b,r,a_start,a_lim] = ps_param_auto(problem)
+function [adapt,alpha,beta,epsilon,b,r] = ps_param_auto(problem)
 %PS_PARAM_AUTO Some autocomputed parameters to load
 %   This file will compute some parameters based on the problems dimensions
 %   and can be manipulated to use either adaptive (m = 2 only) or
@@ -16,9 +16,5 @@ beta=1;
 epsilon=0.1;
 b = ones(m,1);
 r = ones(m,1);
-
-% Optional parameter for range of a
-a_start = [];
-a_lim = [];
 end
 

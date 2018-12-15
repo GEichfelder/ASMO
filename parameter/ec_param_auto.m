@@ -1,4 +1,4 @@
-function [adapt,alpha,beta,epsilon,b,r,a_start,a_lim] = ec_param_auto(problem)
+function [adapt,alpha,beta,epsilon,b,r] = ec_param_auto(problem)
 %EC_PARAM_AUTO Autocomputes parameters for epsilon-constraint method
 %   A demonstartion of how a parameter file could look like for the
 %   ps_standard solver (in fact those parameters will transform it into
@@ -21,9 +21,5 @@ epsilon=0.1;
 b = zeros(m,1);
 b(m) = 1;
 r = b;
-
-% Optional parameter for range of a
-a_start = [];
-a_lim = [];
 end
 

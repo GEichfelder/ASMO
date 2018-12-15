@@ -1,4 +1,4 @@
-function [xres,fres,k] = ps_adapt(problem,alpha,beta,epsilon,b,r,a_start,a_lim)
+function [xres,fres,k] = ps_adapt(problem,alpha,beta,epsilon,b,r)
 %PS_ADAPT Adaptive Pascoletti Serafini Method for m=2
 %   Computes optimal solutions of a given function f by using the adaptive
 %   Pascoletti Serafini Scalarization Method
@@ -18,20 +18,19 @@ progress = epsilon;
 xres = zeros(n,m);
 fres = zeros(m,m);
 
-% Autocompute parameter a if not given
-if isempty(a_start)
-	E = eye(m,m);
-    a = zeros(m,m);
-	for i=1:m
-        [xtmp,~] = fmincon(@(x) E(i,:)*fun(x),x0,Aineq,bineq,Aeq,beq,lb,ub,nonlcon,options);
-        ftmp = fun(xtmp);
-        a(:,i) = ftmp-((b'*ftmp-beta)/(b'*r)).*r;
-        fres(:,i) = ftmp;
-        xres(:,i) = xtmp;
-	end
-    a_lim = a(:,2);
-    a_start = a(:,1);
+% Autocompute parameter a
+E = eye(m,m);
+a = zeros(m,m);
+for i=1:m
+    [xtmp,~] = fmincon(@(x) E(i,:)*fun(x),x0,Aineq,bineq,Aeq,beq,lb,ub,nonlcon,options);
+    ftmp = fun(xtmp);
+    a(:,i) = ftmp-((b'*ftmp-beta)/(b'*r)).*r;
+    fres(:,i) = ftmp;
+    xres(:,i) = xtmp;
 end
+a_lim = a(:,2);
+a_start = a(:,1);
+
 
 % Set range for parameter a
 v = a_lim-a_start;

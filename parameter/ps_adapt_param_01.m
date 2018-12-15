@@ -1,4 +1,4 @@
-function [adapt,alpha,beta,epsilon,b,r,a_start,a_lim] = ps_adapt_param_01(~)
+function [adapt,alpha,beta,epsilon,b,r] = ps_adapt_param_01(~)
 %PS_ADAPT_PARAM_01 Some default parameters for ps_adapt to load
 %   A demonstration of how a parameter file could look like. You can use
 %   this together with problem_01 to see how the adaptive algorithm
@@ -13,9 +13,5 @@ beta=1;
 epsilon=0.05;
 b=[1;1];
 r=[1;1];
-
-% Optional parameter for range of a
-a_start = [];
-a_lim = [];
 end
 

@@ -4,7 +4,7 @@ function [adapt,alpha,beta,epsilon,b,r] = ps_adapt_param_01(~)
 %   this together with problem_01 to see how the adaptive algorithm
 %   works for m = 2.
 
-% Should Pascoletti Serafini use adapted mode? (1 == yes, 0 == no)
+% Should Pascoletti Serafini use adaptive mode? (1 == yes, 0 == no)
 adapt = 1;
 
 % Parameter for Pascoletti Serafini

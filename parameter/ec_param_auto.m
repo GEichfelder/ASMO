@@ -5,7 +5,7 @@ function [adapt,alpha,beta,epsilon,b,r] = ec_param_auto(problem)
 %   epsilon-constraint method). This parameter file uses the dimension
 %   parameters of a given problem to compute the corresponding variables.
 
-% Should Pascoletti Serafini use adapted mode? (1 == yes, 0 == no)
+% Should Pascoletti Serafini use adaptive mode? (1 == yes, 0 == no)
 adapt = 0;
 
 % What is the dimension of our problem?

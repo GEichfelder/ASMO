@@ -22,11 +22,11 @@ bineq = [];
 Aeq = [];
 beq = [];
 
-% Lower and upper bounds
+% Lower and upper bounds (lb <= x <= ub)
 lb = zeros(n,1);
 ub = Inf(n,1);
 
-% Non-linear constraints
+% Non-linear constraints (c(x) <= 0, ceq(x) = 0)
 function [c,ceq] = nonlcon_fun(x)
     c = x(1)^4+2*x(2)^3+5*x(3)^2-1;
     ceq = [];

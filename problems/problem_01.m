@@ -21,11 +21,11 @@ bineq = [];
 Aeq = [];
 beq = [];
 
-% Lower and upper bounds
+% Lower and upper bounds (lb <= x <= ub)
 lb = ones(n,1).*(-4);
 ub = ones(n,1).*4;
 
-% Non-linear constraints
+% Non-linear constraints (c(x) <= 0, ceq(x) = 0)
 function [c,ceq] = nonlcon_fun(~)
     c = [];
     ceq = [];

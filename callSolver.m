@@ -35,14 +35,14 @@ if plot_result > 0
         grid on;
         xlabel('f_1');
         ylabel('f_2');
-        title('Approximation of pareto front');
+        title('Representation of the set \{f(x) | x \in S efficient\}');
     elseif m < 4
         plot3(fres(1,:),fres(2,:),fres(3,:),'LineStyle','none','Marker','o','MarkerFaceColor','black');
         grid on;
         xlabel('f_1');
         ylabel('f_2');
         zlabel('f_3');
-        title('Approximation of pareto front');
+        title('Representation of the set \{f(x) | x \in S efficient\}');
     end
 end
 end

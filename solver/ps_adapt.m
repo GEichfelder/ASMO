@@ -45,8 +45,12 @@ if ~isempty(Aeq)
     l = size(Aeq,1);
     Aeq = [Aeq,zeros(l,1)];
 end
-lb = [lb;-Inf];
-ub = [ub;Inf];
+if ~isempty(lb)
+    lb = [lb;-Inf];
+end
+if ~isempty(ub)
+    ub = [ub;Inf];
+end
 function [ps_c,ps_ceq] = ps_nonlcon(x)
     x_part = x(1:n);
     [c,ps_ceq] = nonlcon(x_part);

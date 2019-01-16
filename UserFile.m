@@ -5,10 +5,10 @@ clc;
 
 %% Please enter your parameters below
 % Your Problem
-problem = 'problem_01';
+problem = 'problem_KimDeWeck';
 
 % Choose a parameter file
-parameter = 'ps_param_01';
+parameter = 'ps_param_auto';
 
 % Should the result be plotted (m = 2 and m = 3 only) [1 == yes, 0 == no]
 plot_result = 1;

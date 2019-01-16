@@ -36,8 +36,12 @@ if ~isempty(Aeq)
     l = size(Aeq,1);
     Aeq = [Aeq,zeros(l,m)];
 end
-lb = [lb;-(Inf(m,1))];
-ub = [ub;Inf(m,1)];
+if ~isempty(lb)
+    lb = [lb;-(Inf(m,1))];
+end
+if ~isempty(ub)
+    ub = [ub;Inf(m,1)];
+end
 x0 = [x0;zeros(m,1)];
 function [cuboid_c,cuboid_ceq] = cuboid_nonlcon(x)
     x_part = x(1:n);

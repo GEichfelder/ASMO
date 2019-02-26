@@ -1,7 +1,7 @@
 # MOPS - Multiobjective Problem Solver
 ## Introduction
 This repository contains a MATLAB implementation of algorithms for solving multiobjective optimization problems. 
-The implementation was realized as work for [Gabriele Eichfelder](https://www.tu-ilmenau.de/mmor/team/gabriele-eichfelder/) at TU Ilmenau (Institute of Mathematics).
+The implementation was realized as work for [Gabriele Eichfelder](https://www.tu-ilmenau.de/mmor/team/gabriele-eichfelder/) at TU Ilmenau (Institute for Mathematics).
 
 You can start using the algorithms easily by downloading or cloning this repository using the green button near the top of the [GitHub page](https://github.com/LeoWarnow/MOPS).
 It is highly recommended to read the [Documentation file](https://github.com/LeoWarnow/MOPS/blob/master/Documentation.pdf) first.

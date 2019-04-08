@@ -1,4 +1,4 @@
-# MOPS - Multiobjective Problem Solver
+# ASMO - A Solver for Multiobjective Optimization
 ## Introduction
 This repository contains a MATLAB implementation of algorithms for solving multiobjective optimization problems. 
 The implementation was realized by [Leo Warnow](https://github.com/LeoWarnow) as work for [Gabriele Eichfelder](https://www.tu-ilmenau.de/mmor/team/gabriele-eichfelder/) at TU Ilmenau (Institute for Mathematics).

@@ -3,8 +3,8 @@
 This repository contains a MATLAB implementation of algorithms for solving multiobjective optimization problems. 
 The implementation was realized by [Leo Warnow](https://github.com/LeoWarnow) as work for [Gabriele Eichfelder](https://www.tu-ilmenau.de/mmor/team/gabriele-eichfelder/) at TU Ilmenau (Institute for Mathematics).
 
-You can start using the algorithms easily by downloading or cloning this repository using the green button near the top of the [GitHub page](https://github.com/LeoWarnow/MOPS).
-It is highly recommended to read the [Documentation file](https://github.com/LeoWarnow/MOPS/blob/master/Documentation.pdf) first.
+You can start using the algorithms easily by downloading or cloning this repository using the green button near the top of the [GitHub page](https://github.com/GEichfelder/ASMO).
+It is highly recommended to read the [Documentation file](https://github.com/GEichfelder/ASMO/blob/master/Documentation.pdf) first.
 It will guide you through the basic usage of the algorithms and shows you how to provide your own problems.
 It also contains a walkthrough for some demo files.
 In this way you can easily get used to working with the algorithm.
